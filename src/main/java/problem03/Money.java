@@ -10,21 +10,33 @@ public class Money {
 	private int amount;
 	
 	public Money(int amount) {
+		super();
+		this.amount = amount;
 	}
 
 	public Money add(Money money) {
-		return null;
+		Money m_add = new Money(this.amount+money.amount);
+		return m_add;
 	}
 
 	public Money minus(Money money) {
-		return null;
+		Money m_minus = new Money(this.amount - money.amount);
+		return m_minus;
 	}
 
 	public Money multiply(Money money) {
-		return null;
+		Money m_multiply = new Money(this.amount * money.amount);
+		return m_multiply;
 	}
 
 	public Money devide(Money money) {
-		return null;
+		Money m_devide = new Money(this.amount / money.amount);
+		return m_devide;
+	}
+	
+	public boolean equals(Money money) {
+		boolean flag = false;
+		if(this.amount == money.amount) flag = true;
+		return flag;
 	}
 }
